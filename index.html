@@ -101,7 +101,7 @@
       background: var(--gray-light); border: 1px solid var(--gray-mid);
       border-radius: 20px; padding: 40px 32px;
       transition: background .3s, transform .3s, box-shadow .3s; cursor: default;
-      flex: 0 0 calc(33.333% - 16px); max-width: calc(33.333% - 16px);
+      flex: 0 0 100%; max-width: 100%;
     }
     .clase-card:hover { background: var(--gray-mid); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.08); }
     .clase-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
@@ -361,8 +361,8 @@
         <img src="galeria3.jpg" alt="Yoga en estudio" loading="lazy">
         <div class="galeria-overlay"></div>
       </div>
-      <div class="galeria-item reveal" onclick="openLightbox('pilar.jpg')">
-        <img src="pilar.jpg" alt="Pilar - instructora" loading="lazy">
+      <div class="galeria-item reveal" onclick="openLightbox('galeria4.jpg')">
+        <img src="galeria4.jpg" alt="Clase nocturna en Utopía Studio" loading="lazy">
         <div class="galeria-overlay"></div>
       </div>
     </div>
@@ -649,7 +649,7 @@
     let startX = 0;
     let isDragging = false;
 
-    function visibleCount() { return window.innerWidth <= 700 ? 1 : window.innerWidth <= 900 ? 2 : 3; }
+    function visibleCount() { return 1; }
     function maxIndex() { return Math.max(0, cards.length - visibleCount()); }
 
     function buildDots() {
